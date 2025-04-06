@@ -2,7 +2,7 @@ import pandas as pd
 import logging
 
 
-def extract(file_path):
+def extract_data(file_path):
     """
     Extrae datos de un archivo CSV y devuelve un DataFrame de pandas.
 
@@ -30,4 +30,4 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
     file_path = '../data/raw_titanic_data.csv'
-    raw_data = extract(file_path)
+    raw_data = extract_data(file_path)
