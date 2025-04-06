@@ -19,6 +19,7 @@ Estructura general del proyecto:
 │   │   └── workflow.py
 ├── data/
 ├── scripts/
+|   ├── __init__.py
 │   ├── extract.py
 │   ├── transform.py
 │   └── load.py
