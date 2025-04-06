@@ -11,5 +11,26 @@ Aquí puedes aprender más sobre [Apache Airflow](https://airflow.apache.org/doc
 ## Descripción general
 Este proyecto tiene como objetivo el desarrollo de una pipeline completa para el procesamiento de un dataset. Se utiliza `Apache Airflow` para la orquestación de las tareas, que incluyen la lectura de un archivo CSV, la aplicación de transformaciones y limpieza de datos con `Python`, y la carga final en una base de datos `PostgreSQL`. Este flujo de trabajo permite la exploración y el análisis de los datos a través de consultas SQL.
 
+Estructura general del proyecto:
+```
+.
+├── airflow/
+│   ├── dags/
+│   │   └── workflow.py
+├── data/
+├── scripts/
+│   ├── extract.py
+│   ├── transform.py
+│   └── load.py
+├── README.md
+├── requirements.txt
+└── .gitignore
+```
+
 ## Fuentes de datos utilizadas
-## Cómo configurar el entorno
+Puedes descargar el archivo `CSV` desde este repositorio.
+```
+.
+├── data/raw_titanic_data.csv
+```
+También puedes descargarlo directamente desde [kaggle](https://www.kaggle.com/competitions/titanic/data)
