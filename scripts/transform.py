@@ -19,4 +19,9 @@ def transform_data(raw_data):
     raw_data.fillna({"Age": raw_data["Age"].mean(),
                     "Fare": raw_data["Fare"].mean(),
                     }, inplace=True)
+
+    # Cambio en filas para mayor claridad
+    raw_data.replace({"Embarked": {"S": "Southampton", "C": "Cherbourg", "Q": "Queenstown"}}, inplace=True)
+    raw_data["Fare"] = raw_data["Fare"].round(2)
+
     return raw_data
