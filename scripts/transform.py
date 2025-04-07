@@ -11,3 +11,12 @@ def transform_data(raw_data):
     Returns:
         clean_data (pd.DataFrame): Datos transformados.
     """
+
+    # Eliminar columnas innecesarias
+    raw_data.drop(columns=["Cabin", "SibSp", "Parch"], inplace=True)
+
+    # Manejo de valores nulos
+    raw_data.fillna({"Age": raw_data["Age"].mean(),
+                    "Fare": raw_data["Fare"].mean(),
+                    }, inplace=True)
+    return raw_data
