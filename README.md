@@ -35,3 +35,13 @@ Puedes descargar el archivo `CSV` desde este repositorio.
 ├── data/raw_titanic_data.csv
 ```
 También puedes descargarlo directamente desde [kaggle](https://www.kaggle.com/competitions/titanic/data)
+
+
+## Resultados
+Podemos observar la información correctamente cargada en la base de datos
+![](/data/img/dbBrowser.png)
+
+También verificamos a través de la interfaz gráfica de Airflow como se han ejecutado correctamente todas las tareas del flujo de trabajo.
+![](/data/img/airflow1.png)
+
+![](/data/img/airflow2.png)
