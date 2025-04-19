@@ -6,6 +6,7 @@ sys.path.append(root_path)
 
 from scripts.extract import extract_data
 from scripts.transform import transform_data
+from scripts.load import load_data
 
 from airflow.models.dag import DAG
 from airflow.operators.python import PythonOperator
@@ -35,5 +36,10 @@ with DAG(
         python_callable=transform_data,
         op_kwargs={'raw_data': '{{ task_instance.xcom_pull(task_ids="extract") }}'},
     )
+    load_task = PythonOperator(
+        task_id='load',
+        python_callable=load_data,
+        op_kwargs={'clean_df': '{{ task_instance.xcom_pull(task_ids="transform") }}'},
+    )
 
-    extract_task >> transform_task
+    extract_task >> transform_task >> load_task
