@@ -9,7 +9,7 @@ En este proyecto, se utiliza para automatizar las tareas de extracción, transfo
 Aquí puedes aprender más sobre [Apache Airflow](https://airflow.apache.org/docs/apache-airflow/stable/index.html).
 
 ## Descripción general
-Este proyecto tiene como objetivo el desarrollo de una pipeline completa para el procesamiento de un dataset. Se utiliza `Apache Airflow` para la orquestación de las tareas, que incluyen la lectura de un archivo CSV, la aplicación de transformaciones y limpieza de datos con `Python`, y la carga final en una base de datos `PostgreSQL`. Este flujo de trabajo permite la exploración y el análisis de los datos a través de consultas SQL.
+Este proyecto tiene como objetivo el desarrollo de una pipeline completa para el procesamiento de un dataset. Se utiliza `Apache Airflow` para la orquestación de las tareas, que incluyen la lectura de un archivo CSV, la aplicación de transformaciones y limpieza de datos con `Python`, y la carga final en una base de datos `SQLite`. Este flujo de trabajo permite la exploración y el análisis de los datos a través de consultas SQL.
 
 Estructura general del proyecto:
 ```
