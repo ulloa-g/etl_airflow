@@ -8,5 +8,6 @@ apache-airflow-providers-http==5.0.0
 apache-airflow-providers-imap==3.8.0
 apache-airflow-providers-smtp==1.9.0
 apache-airflow-providers-sqlite==4.0.0
+pyarrow-19.0.1
 pandas==2.2.3
 psycopg2-binary==2.9.10
