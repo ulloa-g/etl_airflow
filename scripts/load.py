@@ -1,9 +1,9 @@
 import pandas as pd
 import sqlite3
 
-dbname = 'titanic.db'
+dbpath = '/home/gabriel/repos/etl_airflow/data/titanic.db'
 table_name = 'titanic_data'
-conn = sqlite3.connect(dbname)
+conn = sqlite3.connect(dbpath)
 
 def load_data(clean_df):
     """
